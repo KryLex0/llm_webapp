@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "llm_webapp"
+version = "0.1.0"
+description = ""
+authors = ["Adam MKHININI <adam.mkh@hotmail.fr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = "^0.3.9"
+langchain-core = "^0.3.21"
+langchain-community = "^0.3.9"
+langchain-ollama = "^0.2.1"
+devtools = "^0.12.2"
+ai-core = "^0.0.14"
+llm = "^0.19"
+pydantic = "^2.10.3"
+transformers = "^4.46.3"
+langchain-openai = "^0.2.11"
+langchain-experimental = "^0.3.3"
+uvicorn = "^0.32.1"
+fastapi = "^0.115.6"
+python-multipart = "^0.0.19"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

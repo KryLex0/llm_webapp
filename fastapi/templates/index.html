@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI</title>
+</head>
+<body>
+    <form id="post_question" method="post" action="/ask/response">
+        <table>
+            <th>
+                <tr>
+                    <p>Question:</p>
+                </tr>
+                <td>
+                    <input type="text" id="question" name="question" value="What is the capital of France?">
+                    <select name="model" id="model">
+                        <option value="">--Please choose an option--</option>
+                        <!-- <option value="tinyllama">Tinyllama</option>
+                        <option value="llama3_2">llama3.2</option> -->
+                        {% for model in llm_models %}
+                            <option value="{{ model }}">{{ model }}</option>
+                        {% endfor %}
+                    </select>
+
+                </td>
+            </th>
+        </table>
+        <!-- submit form -->
+        <input onclick="post_question()" class="submit" type="submit" value="Submit">
+    </form>
+</body>
+</html>
