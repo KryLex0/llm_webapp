@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI</title>
+</head>
+<body>
+    <form id="post_search" method="post" action="/search/response">
+        <table>
+            <th>
+                <tr>
+                    <p>Question:</p>
+                </tr>
+                <td>
+                    <input type="text" id="json_url" name="json_url" value="https://gist.githubusercontent.com/svngoku/dadcd4ddd28ed52e70e20c6aa3b81b72/raw/3f608edbad8b3316af303e45a6f94816db76ab9d/jobs.json">
+                    <input type="text" id="question" name="question" value="How much of the jobs are in departement of Ile-de-France?">
+                    <select name="model" id="model">
+                        <option value="">--Please choose an option--</option>
+                        <!-- <option value="tinyllama">Tinyllama</option>
+                        <option value="llama3_2">llama3.2</option> -->
+                        {% for model in llm_models %}
+                            <option value="{{ model }}">{{ model }}</option>
+                        {% endfor %}
+                    </select>
+
+                </td>
+            </th>
+        </table>
+        <!-- submit form -->
+        <input onclick="post_search()" class="submit" type="submit" value="Submit">
+    </form>
+</body>
+</html>
